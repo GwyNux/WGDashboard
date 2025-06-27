@@ -332,7 +332,8 @@ _determinePypiMirror(){
 install_wgd(){
     printf "[WGDashboard] Starting to install WGDashboard\n"
     _determineOS
-    
+	printf "[WGDashboard] %s Патчим Utilities.py для offline-режима\n" "$install"
+        python3 patch_utilities.py
 	if [ ! -d "log" ] 
 	then 
 			mkdir "log"
